@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		686F4332165D5E3E008FB7A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686F4331165D5E3E008FB7A3 /* UIKit.framework */; };
+		686F4334165D5E3E008FB7A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686F4333165D5E3E008FB7A3 /* Foundation.framework */; };
+		686F4336165D5E3E008FB7A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686F4335165D5E3E008FB7A3 /* CoreGraphics.framework */; };
+		686F433C165D5E3E008FB7A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 686F433A165D5E3E008FB7A3 /* InfoPlist.strings */; };
+		686F433E165D5E3E008FB7A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 686F433D165D5E3E008FB7A3 /* main.m */; };
+		686F4342165D5E3E008FB7A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 686F4341165D5E3E008FB7A3 /* AppDelegate.m */; };
+		686F4344165D5E3E008FB7A3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 686F4343165D5E3E008FB7A3 /* Default.png */; };
+		686F4346165D5E3E008FB7A3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 686F4345165D5E3E008FB7A3 /* Default@2x.png */; };
+		686F4348165D5E3E008FB7A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 686F4347165D5E3E008FB7A3 /* Default-568h@2x.png */; };
+		686F434B165D5E3E008FB7A3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686F4349165D5E3E008FB7A3 /* MainStoryboard.storyboard */; };
+		686F434E165D5E3E008FB7A3 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 686F434D165D5E3E008FB7A3 /* ViewController.mm */; };
+		686F4355165D5E5B008FB7A3 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686F4354165D5E5B008FB7A3 /* opencv2.framework */; };
+		686F4357165D65AE008FB7A3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686F4356165D65AE008FB7A3 /* Accelerate.framework */; };
+		686F4359165D65BF008FB7A3 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686F4358165D65BF008FB7A3 /* AssetsLibrary.framework */; };
+		686F435B165D65D2008FB7A3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686F435A165D65D2008FB7A3 /* AVFoundation.framework */; };
+		686F435D165D6602008FB7A3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686F435C165D6602008FB7A3 /* CoreImage.framework */; };
+		686F435F165D660A008FB7A3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686F435E165D660A008FB7A3 /* CoreMedia.framework */; };
+		686F4361165D6610008FB7A3 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686F4360165D6610008FB7A3 /* CoreVideo.framework */; };
+		686F4363165D6619008FB7A3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686F4362165D6619008FB7A3 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		686F432D165D5E3E008FB7A3 /* DasRealest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DasRealest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		686F4331165D5E3E008FB7A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		686F4333165D5E3E008FB7A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		686F4335165D5E3E008FB7A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		686F4339165D5E3E008FB7A3 /* DasRealest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DasRealest-Info.plist"; sourceTree = "<group>"; };
+		686F433B165D5E3E008FB7A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		686F433D165D5E3E008FB7A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		686F433F165D5E3E008FB7A3 /* DasRealest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DasRealest-Prefix.pch"; sourceTree = "<group>"; };
+		686F4340165D5E3E008FB7A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		686F4341165D5E3E008FB7A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		686F4343165D5E3E008FB7A3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		686F4345165D5E3E008FB7A3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		686F4347165D5E3E008FB7A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		686F434A165D5E3E008FB7A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		686F434C165D5E3E008FB7A3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		686F434D165D5E3E008FB7A3 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		686F4354165D5E5B008FB7A3 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		686F4356165D65AE008FB7A3 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		686F4358165D65BF008FB7A3 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		686F435A165D65D2008FB7A3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		686F435C165D6602008FB7A3 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		686F435E165D660A008FB7A3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		686F4360165D6610008FB7A3 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		686F4362165D6619008FB7A3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		686F432A165D5E3E008FB7A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				686F4363165D6619008FB7A3 /* QuartzCore.framework in Frameworks */,
+				686F4361165D6610008FB7A3 /* CoreVideo.framework in Frameworks */,
+				686F435F165D660A008FB7A3 /* CoreMedia.framework in Frameworks */,
+				686F435D165D6602008FB7A3 /* CoreImage.framework in Frameworks */,
+				686F435B165D65D2008FB7A3 /* AVFoundation.framework in Frameworks */,
+				686F4359165D65BF008FB7A3 /* AssetsLibrary.framework in Frameworks */,
+				686F4357165D65AE008FB7A3 /* Accelerate.framework in Frameworks */,
+				686F4332165D5E3E008FB7A3 /* UIKit.framework in Frameworks */,
+				686F4334165D5E3E008FB7A3 /* Foundation.framework in Frameworks */,
+				686F4336165D5E3E008FB7A3 /* CoreGraphics.framework in Frameworks */,
+				686F4355165D5E5B008FB7A3 /* opencv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		686F4322165D5E3E008FB7A3 = {
+			isa = PBXGroup;
+			children = (
+				686F4337165D5E3E008FB7A3 /* DasRealest */,
+				686F4330165D5E3E008FB7A3 /* Frameworks */,
+				686F432E165D5E3E008FB7A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		686F432E165D5E3E008FB7A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				686F432D165D5E3E008FB7A3 /* DasRealest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		686F4330165D5E3E008FB7A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				686F4362165D6619008FB7A3 /* QuartzCore.framework */,
+				686F4360165D6610008FB7A3 /* CoreVideo.framework */,
+				686F435E165D660A008FB7A3 /* CoreMedia.framework */,
+				686F435C165D6602008FB7A3 /* CoreImage.framework */,
+				686F435A165D65D2008FB7A3 /* AVFoundation.framework */,
+				686F4358165D65BF008FB7A3 /* AssetsLibrary.framework */,
+				686F4356165D65AE008FB7A3 /* Accelerate.framework */,
+				686F4354165D5E5B008FB7A3 /* opencv2.framework */,
+				686F4331165D5E3E008FB7A3 /* UIKit.framework */,
+				686F4333165D5E3E008FB7A3 /* Foundation.framework */,
+				686F4335165D5E3E008FB7A3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		686F4337165D5E3E008FB7A3 /* DasRealest */ = {
+			isa = PBXGroup;
+			children = (
+				686F4340165D5E3E008FB7A3 /* AppDelegate.h */,
+				686F4341165D5E3E008FB7A3 /* AppDelegate.m */,
+				686F4349165D5E3E008FB7A3 /* MainStoryboard.storyboard */,
+				686F434C165D5E3E008FB7A3 /* ViewController.h */,
+				686F434D165D5E3E008FB7A3 /* ViewController.mm */,
+				686F4338165D5E3E008FB7A3 /* Supporting Files */,
+			);
+			path = DasRealest;
+			sourceTree = "<group>";
+		};
+		686F4338165D5E3E008FB7A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				686F4339165D5E3E008FB7A3 /* DasRealest-Info.plist */,
+				686F433A165D5E3E008FB7A3 /* InfoPlist.strings */,
+				686F433D165D5E3E008FB7A3 /* main.m */,
+				686F433F165D5E3E008FB7A3 /* DasRealest-Prefix.pch */,
+				686F4343165D5E3E008FB7A3 /* Default.png */,
+				686F4345165D5E3E008FB7A3 /* Default@2x.png */,
+				686F4347165D5E3E008FB7A3 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		686F432C165D5E3E008FB7A3 /* DasRealest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 686F4351165D5E3E008FB7A3 /* Build configuration list for PBXNativeTarget "DasRealest" */;
+			buildPhases = (
+				686F4329165D5E3E008FB7A3 /* Sources */,
+				686F432A165D5E3E008FB7A3 /* Frameworks */,
+				686F432B165D5E3E008FB7A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DasRealest;
+			productName = DasRealest;
+			productReference = 686F432D165D5E3E008FB7A3 /* DasRealest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		686F4324165D5E3E008FB7A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Milton and Parc";
+			};
+			buildConfigurationList = 686F4327165D5E3E008FB7A3 /* Build configuration list for PBXProject "DasRealest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 686F4322165D5E3E008FB7A3;
+			productRefGroup = 686F432E165D5E3E008FB7A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				686F432C165D5E3E008FB7A3 /* DasRealest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		686F432B165D5E3E008FB7A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				686F433C165D5E3E008FB7A3 /* InfoPlist.strings in Resources */,
+				686F4344165D5E3E008FB7A3 /* Default.png in Resources */,
+				686F4346165D5E3E008FB7A3 /* Default@2x.png in Resources */,
+				686F4348165D5E3E008FB7A3 /* Default-568h@2x.png in Resources */,
+				686F434B165D5E3E008FB7A3 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		686F4329165D5E3E008FB7A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				686F433E165D5E3E008FB7A3 /* main.m in Sources */,
+				686F4342165D5E3E008FB7A3 /* AppDelegate.m in Sources */,
+				686F434E165D5E3E008FB7A3 /* ViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		686F433A165D5E3E008FB7A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				686F433B165D5E3E008FB7A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		686F4349165D5E3E008FB7A3 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				686F434A165D5E3E008FB7A3 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		686F434F165D5E3E008FB7A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		686F4350165D5E3E008FB7A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		686F4352165D5E3E008FB7A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DasRealest/DasRealest-Prefix.pch";
+				INFOPLIST_FILE = "DasRealest/DasRealest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		686F4353165D5E3E008FB7A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DasRealest/DasRealest-Prefix.pch";
+				INFOPLIST_FILE = "DasRealest/DasRealest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		686F4327165D5E3E008FB7A3 /* Build configuration list for PBXProject "DasRealest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				686F434F165D5E3E008FB7A3 /* Debug */,
+				686F4350165D5E3E008FB7A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		686F4351165D5E3E008FB7A3 /* Build configuration list for PBXNativeTarget "DasRealest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				686F4352165D5E3E008FB7A3 /* Debug */,
+				686F4353165D5E3E008FB7A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 686F4324165D5E3E008FB7A3 /* Project object */;
+}
