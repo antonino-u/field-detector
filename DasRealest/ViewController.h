@@ -17,4 +17,8 @@ using namespace cv;
 
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
 @property (nonatomic, retain) CvVideoCamera* videoCamera;
+
+
+- (IBAction) switchCamera;
+
 @end
