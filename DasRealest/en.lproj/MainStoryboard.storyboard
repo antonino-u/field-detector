@@ -14,8 +14,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="iPi-Q1-vOH">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="352" id="Cqc-mZ-zFg"/>
-                                    <constraint firstAttribute="width" constant="288" id="ssp-Yr-a4R"/>
+                                    <constraint firstAttribute="height" constant="390" id="J8K-Im-a8x"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXY-Qj-nRA">
@@ -31,16 +30,25 @@
                                     <action selector="switchCamera" destination="2" eventType="touchUpInside" id="gfg-rf-9cI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="fps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9b-dC-Qkf">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZXY-Qj-nRA" firstAttribute="centerX" secondItem="iPi-Q1-vOH" secondAttribute="centerX" type="default" id="Dpi-PS-btq"/>
-                            <constraint firstItem="iPi-Q1-vOH" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="L7s-lb-1Eb"/>
-                            <constraint firstItem="ZXY-Qj-nRA" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="MDh-20-zyw"/>
+                            <constraint firstAttribute="trailing" secondItem="w9b-dC-Qkf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7ds-fp-Ml7"/>
+                            <constraint firstItem="ZXY-Qj-nRA" firstAttribute="centerX" secondItem="iPi-Q1-vOH" secondAttribute="centerX" type="default" id="J7q-jb-hjr"/>
+                            <constraint firstItem="iPi-Q1-vOH" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="NGL-6s-2FV"/>
                             <constraint firstItem="ZXY-Qj-nRA" firstAttribute="top" secondItem="iPi-Q1-vOH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PDA-i0-jfM"/>
+                            <constraint firstItem="w9b-dC-Qkf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="UFi-zN-A6N"/>
+                            <constraint firstItem="iPi-Q1-vOH" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="hkw-jS-T0T"/>
+                            <constraint firstItem="iPi-Q1-vOH" firstAttribute="top" secondItem="3" secondAttribute="top" constant="53" id="yI1-JP-K9S"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fpsLabel" destination="w9b-dC-Qkf" id="D3N-Bn-Uai"/>
                         <outlet property="imageView" destination="iPi-Q1-vOH" id="eOM-lT-yKK"/>
                     </connections>
                 </viewController>

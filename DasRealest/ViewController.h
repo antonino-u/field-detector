@@ -13,12 +13,16 @@ using namespace cv;
 @interface ViewController : UIViewController<CvVideoCameraDelegate>
 {
   CvVideoCamera* videoCamera;
+  UILabel *fpsLabel;
+  NSTimer *pollingTimer;
 }
 
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
 @property (nonatomic, retain) CvVideoCamera* videoCamera;
+@property (nonatomic, retain) IBOutlet UILabel *fpsLabel;
 
 
 - (IBAction) switchCamera;
+- (void) updateFps;
 
 @end

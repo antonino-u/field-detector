@@ -16,12 +16,17 @@
 
 @synthesize imageView = _imageView;
 @synthesize videoCamera = _videoCamera;
+@synthesize fpsLabel = _fpsLabel;
+
+int framesProcessed = 0;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	
+	//start a timer
+	pollingTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateFps) userInfo:nil repeats:YES];
+	//start the video capture
 	self.videoCamera = [[CvVideoCamera alloc] initWithParentView:self.imageView];
 	self.videoCamera.delegate = self;
 	self.videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
@@ -47,7 +52,7 @@
 - (void)processImage:(Mat&)source;
 {
 	//estimates the frames per second from this frame only: get the current time
-	double fps1 = CACurrentMediaTime();
+	//double fps1 = CACurrentMediaTime();
 	
 	//prepare a cannied image for the canny algorithm and a blurred
 	Mat cannied, blurred;
@@ -100,9 +105,15 @@
 	//cvtColor(image_copy, image, CV_BGR2BGRA);
 	
 	//again, get the current time:
-	double fps2 = CACurrentMediaTime();
+	//double fps2 = CACurrentMediaTime();
 	//...and just for now, put it in the console:
 	//printf("FPS: %f",1/(fps2-fps1));
+	framesProcessed++;
+	//printf("frames: %d",framesProcessed);
 }
 
+- (void) updateFps{
+	self.fpsLabel.text = [NSString stringWithFormat:@"%d fps",framesProcessed];
+	framesProcessed = 0;
+}
 @end
