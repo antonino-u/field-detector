@@ -50,10 +50,28 @@ Mat blurKernel;
 }
 
 - (void)processImage:(Mat&)source;
-{		
+{
   cvtColor(source, source, CV_BGR2GRAY);
+  
+  // this is embarassingly parallel
+  Mat submatrix1 = source.colRange(0,360).rowRange(0,640);
+  Mat submatrix2 = source.colRange(360,720).rowRange(0, 640);
+  Mat submatrix3 = source.colRange(0,360).rowRange(640, 1280);
+  Mat submatrix4 = source.colRange(360,720).rowRange(640,1280);
+  
+  dispatch_queue_t queue = dispatch_queue_create("frame", DISPATCH_QUEUE_CONCURRENT);
+  
+  dispatch_group_t group = dispatch_group_create();
+  
+  dispatch_group_async(group, queue,^{sepFilter2D(submatrix1, submatrix1, 0, blurKernel, blurKernel);});
+  dispatch_group_async(group, queue,^{sepFilter2D(submatrix2, submatrix2, 0, blurKernel, blurKernel);});
+  dispatch_group_async(group, queue,^{sepFilter2D(submatrix3, submatrix3, 0, blurKernel, blurKernel);});
+  dispatch_group_async(group, queue,^{sepFilter2D(submatrix4, submatrix4, 0, blurKernel, blurKernel);});
+  
+  dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+  
   //GaussianBlur(source, source, cv::Size(3,3), 1);
-  sepFilter2D(source, source, 0, blurKernel, blurKernel);
+  //sepFilter2D(source, source, 0, blurKernel, blurKernel);
   //Canny(source, source, 150, 300);
 	
 	framesProcessed++;
