@@ -12,44 +12,44 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="iPi-Q1-vOH">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="390" id="J8K-Im-a8x"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXY-Qj-nRA">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Switch Camera">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="switchCamera" destination="2" eventType="touchUpInside" id="gfg-rf-9cI"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="iPi-Q1-vOH"/>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="fps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9b-dC-Qkf">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="VDa-9L-l5Z">
+                                <connections>
+                                    <action selector="sliderChanged:" destination="2" eventType="valueChanged" id="ZAN-A3-Uv1"/>
+                                    <action selector="updateBlurKernel:" destination="2" eventType="touchUpInside" id="kQS-rQ-n1I"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvP-mb-sK6">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="w9b-dC-Qkf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7ds-fp-Ml7"/>
-                            <constraint firstItem="ZXY-Qj-nRA" firstAttribute="centerX" secondItem="iPi-Q1-vOH" secondAttribute="centerX" type="default" id="J7q-jb-hjr"/>
+                            <constraint firstItem="VDa-9L-l5Z" firstAttribute="top" secondItem="hvP-mb-sK6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ERD-wk-SAY"/>
                             <constraint firstItem="iPi-Q1-vOH" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="NGL-6s-2FV"/>
-                            <constraint firstItem="ZXY-Qj-nRA" firstAttribute="top" secondItem="iPi-Q1-vOH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PDA-i0-jfM"/>
+                            <constraint firstAttribute="trailing" secondItem="VDa-9L-l5Z" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QcX-B2-9M3"/>
+                            <constraint firstAttribute="bottom" secondItem="VDa-9L-l5Z" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="RID-QT-X9e"/>
                             <constraint firstItem="w9b-dC-Qkf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="UFi-zN-A6N"/>
+                            <constraint firstItem="hvP-mb-sK6" firstAttribute="centerX" secondItem="VDa-9L-l5Z" secondAttribute="centerX" type="default" id="bI9-CH-9bC"/>
                             <constraint firstItem="iPi-Q1-vOH" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="hkw-jS-T0T"/>
-                            <constraint firstItem="iPi-Q1-vOH" firstAttribute="top" secondItem="3" secondAttribute="top" constant="53" id="yI1-JP-K9S"/>
+                            <constraint firstItem="VDa-9L-l5Z" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="iSR-R3-LQu"/>
+                            <constraint firstItem="iPi-Q1-vOH" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="rjp-rC-pZP"/>
+                            <constraint firstItem="iPi-Q1-vOH" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="tfM-lr-1oN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blurSlider" destination="VDa-9L-l5Z" id="pNi-wY-gJg"/>
                         <outlet property="fpsLabel" destination="w9b-dC-Qkf" id="D3N-Bn-Uai"/>
                         <outlet property="imageView" destination="iPi-Q1-vOH" id="eOM-lT-yKK"/>
+                        <outlet property="sliderLabel" destination="hvP-mb-sK6" id="94N-go-Qjv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -57,6 +57,22 @@
             <point key="canvasLocation" x="140" y="83"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sliderChanged:"/>
+                <relationship kind="action" name="updateBlurKernel:"/>
+                <relationship kind="outlet" name="blurSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="fpsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="sliderLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

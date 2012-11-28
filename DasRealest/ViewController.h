@@ -15,14 +15,17 @@ using namespace cv;
   CvVideoCamera* videoCamera;
   UILabel *fpsLabel;
   NSTimer *pollingTimer;
+  UILabel *sliderLabel;
 }
 
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
 @property (nonatomic, retain) CvVideoCamera* videoCamera;
 @property (nonatomic, retain) IBOutlet UILabel *fpsLabel;
+@property (nonatomic, retain) IBOutlet UILabel *sliderLabel;
+@property (strong, nonatomic) IBOutlet UISlider *blurSlider;
 
-
-- (IBAction) switchCamera;
+- (IBAction)sliderChanged:(id) sender;
+- (IBAction)updateBlurKernel:(id) sender;
 - (void) updateFps;
 
 @end
